@@ -4,26 +4,20 @@
   "version": "1.0",
   "description": "限制使用Google搜尋引擎、禁用Google AI搜尋功能、禁用各種AI工具",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "permissions": ["activeTab", "tabs", "webRequest"],
-  "host_permissions": [
-    "*://www.google.com/*",
-    "*://google.com/*",
-    "*://www.bing.com/*",
-    "*://bing.com/*",
-    "*://duckduckgo.com/*",
-    "*://www.duckduckgo.com/*",
-    "*://search.yahoo.com/*",
-    "*://perplexity.ai/*",
-    "*://www.perplexity.ai/*",
-    "*://you.com/*",
-    "*://chatgpt.com/*",
-    "*://chat.openai.com/*",
-    "*://gemini.google.com/*",
-    "*://claude.ai/*",
-    "*://*/*"
-  ],
+  "host_permissions": ["*://*/*"],
   "background": {
     "service_worker": "background.js"
   },
